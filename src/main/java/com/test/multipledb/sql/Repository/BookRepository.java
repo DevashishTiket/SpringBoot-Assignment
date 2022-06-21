@@ -13,9 +13,9 @@ public interface BookRepository extends JpaRepository<Book,Long> {
     @Modifying
     @Transactional
     @Query(
-            value = "UPDATE book SET user_id=?2 WHERE book_id=?1",
+            value="UPDATE book SET book_name = ?1 WHERE book_name = ?2",
             nativeQuery = true
     )
-    User updateBookIssuedByBook_Id(Long bookId,Long userId);
+    int updateNameByBookName(String newName,String bookName);
     //UPDATE `table_name` SET `column_name` = `new_value' [WHERE condition];
 }

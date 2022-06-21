@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class BookController {
+public class BookControllerM {
     @Autowired
     private brM repository;
 
